@@ -9,7 +9,7 @@ document.getElementById("prompt-form").addEventListener("submit", function(event
     document.getElementById("inputPrompt").setAttribute("disabled", "")
     document.getElementById("button-addon").setAttribute("disabled", "")
 
-    fetch("imagecanary.squareweb.app/image", {
+    fetch("https://imagecanary.squareweb.app/image", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
