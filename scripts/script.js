@@ -1,0 +1,3 @@
+window.onresize = () =>{
+    location.reload()
+}
