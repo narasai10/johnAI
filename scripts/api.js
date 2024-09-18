@@ -9,12 +9,8 @@ document.getElementById("prompt-form").addEventListener("submit", function(event
     document.getElementById("inputPrompt").setAttribute("disabled", "")
     document.getElementById("button-addon").setAttribute("disabled", "")
 
-    fetch("https://imagecreator.squareweb.app/image", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({ prompt: promptText })
+    fetch(`https://imagecreator.squareweb.app/image?prompt=${encodeURIComponent(promptText)}`, {
+        method: "GET",
     })
     .then(response => response.json()) // Parse da resposta para JSON
     .then(data => {
