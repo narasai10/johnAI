@@ -11,6 +11,7 @@ document.getElementById("prompt-form").addEventListener("submit", function(event
 
     fetch(`https://imagecreator.squareweb.app/image?prompt=${encodeURIComponent(promptText)}`, {
         method: "GET",
+        mode: "cors",
     })
     .then(response => response.json()) // Parse da resposta para JSON
     .then(data => {
